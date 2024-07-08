@@ -1,7 +1,7 @@
 {
   "name": "threejs-training",
   "version": "1.0.0",
-  "description": "",
+  "description": "Watch the tutorial on [YouTube](https://youtu.be/FntV9iEJ0tU)",
   "main": "index.js",
   "dependencies": {
     "esbuild": "^0.21.5",
@@ -13,10 +13,9 @@
     "three": "^0.166.1",
     "vite": "^5.3.3"
   },
-  "devDependencies": {},
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "dev":"vite",
+    "build":"vite build"
   },
   "keywords": [],
   "author": "",
