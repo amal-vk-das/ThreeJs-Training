@@ -1,5 +1,6 @@
-import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js";
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/controls/OrbitControls.js';
+
 import getStarfield from "./src/getStarfield.js";
 import { getFresnelMat } from "./src/getFresnelMat.js";
 
@@ -19,14 +20,16 @@ const earthGroup = new THREE.Group();
 earthGroup.rotation.z = -23.4 * Math.PI / 180;
 scene.add(earthGroup);
 new OrbitControls(camera, renderer.domElement);
+const detail = 12;
 const loader = new THREE.TextureLoader();
-const geometry = new THREE.IcosahedronGeometry(1, 12);
+const geometry = new THREE.IcosahedronGeometry(1, detail);
 const material = new THREE.MeshPhongMaterial({
   map: loader.load("./textures/00_earthmap1k.jpg"),
   specularMap: loader.load("./textures/02_earthspec1k.jpg"),
   bumpMap: loader.load("./textures/01_earthbump1k.jpg"),
   bumpScale: 0.04,
 });
+// material.map.colorSpace = THREE.SRGBColorSpace;
 const earthMesh = new THREE.Mesh(geometry, material);
 earthGroup.add(earthMesh);
 
