@@ -1,5 +1,5 @@
-import * as THREE from './node_modules/three/src/Three.js'
-import { OrbitControls } from './src/OrbitControls.js';
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import getStarfield from "./src/getStarfield.js";
 import { getFresnelMat } from "./src/getFresnelMat.js";
 
